@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DS x Welspun One — AI Training Proposal</title>
+<title>DS x Welspun One — Claude Masterclass Proposal</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -22,7 +22,6 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -45,7 +44,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .cover::before {
     content: '';
     position: absolute;
@@ -64,13 +62,11 @@
     border: 1px solid rgba(201,168,76,0.07);
     pointer-events: none;
   }
-
   .cover-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
   }
-
   .brand-mark {
     font-family: 'DM Sans', sans-serif;
     font-size: 13px;
@@ -79,7 +75,6 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
-
   .cover-tag {
     font-size: 12px;
     font-weight: 500;
@@ -90,7 +85,6 @@
     padding: 6px 14px;
     border-radius: 2px;
   }
-
   .cover-main {
     flex: 1;
     display: flex;
@@ -98,7 +92,6 @@
     justify-content: center;
     padding: 80px 0 40px;
   }
-
   .cover-eyebrow {
     font-size: 12px;
     font-weight: 500;
@@ -107,7 +100,6 @@
     color: var(--gold);
     margin-bottom: 28px;
   }
-
   .cover-title {
     font-family: 'Playfair Display', serif;
     font-size: clamp(44px, 6vw, 72px);
@@ -116,47 +108,37 @@
     line-height: 1.1;
     letter-spacing: -0.02em;
     margin-bottom: 32px;
-    max-width: 720px;
+    max-width: 760px;
   }
-
-  .cover-title span {
-    color: var(--gold-light);
-  }
-
+  .cover-title span { color: var(--gold-light); }
   .cover-desc {
     font-size: 16px;
     font-weight: 300;
     color: rgba(255,255,255,0.5);
-    max-width: 520px;
+    max-width: 540px;
     line-height: 1.8;
   }
-
   .cover-meta {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2px;
     background: rgba(255,255,255,0.08);
-    border-top: 1px solid rgba(255,255,255,0.06);
-    padding-top: 40px;
     margin-top: 60px;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
   }
-
   .meta-item {
     background: rgba(255,255,255,0.04);
-    padding: 20px 24px;
+    padding: 22px 26px;
   }
-
   .meta-label {
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.3);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
-
   .meta-value {
     font-family: 'Playfair Display', serif;
     font-size: 18px;
@@ -164,28 +146,15 @@
     font-weight: 500;
   }
 
-  /* ── CONTAINER ── */
+  /* ── LAYOUT ── */
   .container {
-    max-width: 860px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 0 40px;
   }
-
-  /* ── SECTION BLOCKS ── */
-  .section {
-    padding: 80px 0;
-  }
-
-  .section-dark {
-    background: var(--ink-soft);
-    padding: 80px 0;
-    margin: 0;
-  }
-
-  .section-gold {
-    background: var(--gold-pale);
-    padding: 80px 0;
-  }
+  .section { padding: 80px 0; }
+  .section-dark { background: var(--ink-soft); padding: 80px 0; }
+  .section-gold { background: var(--gold-pale); padding: 80px 0; }
 
   .section-label {
     font-size: 11px;
@@ -196,7 +165,6 @@
     margin-bottom: 16px;
     display: block;
   }
-
   .section-heading {
     font-family: 'Playfair Display', serif;
     font-size: clamp(28px, 4vw, 42px);
@@ -206,26 +174,22 @@
     letter-spacing: -0.02em;
     margin-bottom: 20px;
   }
-
-  .section-dark .section-heading,
-  .section-dark .section-label {
-    color: var(--white);
-  }
-
-  .section-dark .section-label {
-    color: var(--gold);
-  }
-
+  .section-dark .section-heading { color: var(--white); }
+  .section-dark .section-label { color: var(--gold); }
   .section-intro {
     font-size: 16px;
     font-weight: 300;
     color: var(--text-muted);
-    max-width: 620px;
+    max-width: 640px;
     line-height: 1.8;
   }
+  .section-dark .section-intro { color: rgba(255,255,255,0.5); }
 
-  .section-dark .section-intro {
-    color: rgba(255,255,255,0.5);
+  .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+    margin: 24px 0 36px;
   }
 
   /* ── OVERVIEW GRID ── */
@@ -238,12 +202,7 @@
     border-radius: 16px;
     overflow: hidden;
   }
-
-  .overview-card {
-    background: var(--cream);
-    padding: 36px 40px;
-  }
-
+  .overview-card { background: var(--cream); padding: 36px 40px; }
   .overview-card-label {
     font-size: 11px;
     font-weight: 600;
@@ -252,19 +211,10 @@
     color: var(--gold);
     margin-bottom: 12px;
   }
+  .overview-card-text { font-size: 15px; color: var(--text-body); line-height: 1.7; }
+  .overview-card-text strong { font-weight: 600; color: var(--ink); }
 
-  .overview-card-text {
-    font-size: 15px;
-    color: var(--text-body);
-    line-height: 1.7;
-  }
-
-  .overview-card-text strong {
-    font-weight: 600;
-    color: var(--ink);
-  }
-
-  /* ── CALLOUT BOX ── */
+  /* ── CALLOUT ── */
   .callout {
     border-left: 3px solid var(--gold);
     padding: 28px 36px;
@@ -273,7 +223,6 @@
     box-shadow: var(--shadow);
     border-radius: 12px;
   }
-
   .callout-text {
     font-family: 'Playfair Display', serif;
     font-size: 20px;
@@ -282,13 +231,47 @@
     font-style: italic;
   }
 
+  /* ── DAY DIVIDER ── */
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+  .day-badge {
+    background: var(--ink);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 100px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .day-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
   /* ── MODULE CARDS ── */
   .modules-grid {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    margin-top: 52px;
+    gap: 28px;
   }
+  .day-block { margin-bottom: 56px; }
+  .day-block:last-child { margin-bottom: 0; }
 
   .module-card {
     background: var(--white);
@@ -297,10 +280,7 @@
     overflow: hidden;
     transition: box-shadow 0.2s;
   }
-
-  .module-card:hover {
-    box-shadow: var(--shadow);
-  }
+  .module-card:hover { box-shadow: var(--shadow); }
 
   .module-header {
     display: flex;
@@ -309,21 +289,17 @@
     padding: 36px 40px 28px;
     border-bottom: 1px solid var(--border);
   }
-
   .module-num {
     font-family: 'Playfair Display', serif;
     font-size: 40px;
     font-weight: 600;
     color: var(--gold);
     line-height: 1;
-    opacity: 0.5;
+    opacity: 0.45;
     flex-shrink: 0;
-    padding-top: 2px;
     min-width: 48px;
+    padding-top: 2px;
   }
-
-  .module-title-block {}
-
   .module-title {
     font-family: 'Playfair Display', serif;
     font-size: 22px;
@@ -333,7 +309,6 @@
     letter-spacing: -0.01em;
     margin-bottom: 10px;
   }
-
   .module-objective {
     font-size: 14px;
     color: var(--text-muted);
@@ -346,16 +321,11 @@
     grid-template-columns: 2fr 1fr 1fr;
     gap: 0;
   }
-
   .module-col {
     padding: 28px 32px;
     border-right: 1px solid var(--border);
   }
-
-  .module-col:last-child {
-    border-right: none;
-  }
-
+  .module-col:last-child { border-right: none; }
   .module-col-label {
     font-size: 10px;
     font-weight: 600;
@@ -364,46 +334,34 @@
     color: var(--gold);
     margin-bottom: 14px;
   }
-
-  .module-col ul {
-    list-style: none;
-    padding: 0;
-  }
-
+  .module-col ul { list-style: none; padding: 0; }
   .module-col ul li {
     font-size: 13.5px;
     color: var(--text-body);
     line-height: 1.6;
-    padding: 4px 0;
-    padding-left: 14px;
+    padding: 4px 0 4px 16px;
     position: relative;
   }
-
   .module-col ul li::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 11px;
-    width: 5px;
-    height: 5px;
+    left: 0; top: 12px;
+    width: 5px; height: 5px;
     border-radius: 50%;
     background: var(--gold);
     opacity: 0.5;
   }
-
   .module-outcome {
     font-size: 13.5px;
     color: var(--text-body);
     line-height: 1.7;
   }
-
   .tools-pills {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-top: 8px;
+    margin-top: 4px;
   }
-
   .pill {
     display: inline-block;
     font-size: 11px;
@@ -411,22 +369,20 @@
     color: var(--ink-muted);
     background: var(--gold-pale);
     border: 1px solid rgba(201,168,76,0.3);
-    padding: 3px 10px;
-    border-radius: 2px;
+    padding: 4px 10px;
+    border-radius: 4px;
     letter-spacing: 0.03em;
   }
 
-  /* ── TRAINER SECTION ── */
+  /* ── TRAINER ── */
   .trainer-section {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 52px;
     align-items: start;
   }
-
   .trainer-avatar {
-    width: 120px;
-    height: 120px;
+    width: 120px; height: 120px;
     border-radius: 50%;
     background: var(--ink-muted);
     border: 3px solid var(--gold);
@@ -438,7 +394,6 @@
     color: var(--gold);
     flex-shrink: 0;
   }
-
   .trainer-name {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
@@ -446,7 +401,6 @@
     color: var(--white);
     margin-bottom: 4px;
   }
-
   .trainer-title {
     font-size: 13px;
     font-weight: 500;
@@ -455,27 +409,20 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-
   .trainer-bio {
     font-size: 15px;
     color: rgba(255,255,255,0.55);
     line-height: 1.8;
     margin-bottom: 28px;
   }
-
-  .client-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
+  .client-pills { display: flex; flex-wrap: wrap; gap: 8px; }
   .client-pill {
     font-size: 11px;
     font-weight: 500;
     color: rgba(255,255,255,0.6);
     border: 1px solid rgba(255,255,255,0.12);
     padding: 4px 12px;
-    border-radius: 2px;
+    border-radius: 4px;
     letter-spacing: 0.04em;
   }
 
@@ -489,12 +436,7 @@
     border-radius: 16px;
     overflow: hidden;
   }
-
-  .commercial-item {
-    background: var(--white);
-    padding: 40px;
-  }
-
+  .commercial-item { background: var(--white); padding: 40px; }
   .commercial-label {
     font-size: 11px;
     font-weight: 600;
@@ -503,7 +445,6 @@
     color: var(--gold);
     margin-bottom: 12px;
   }
-
   .commercial-value {
     font-family: 'Playfair Display', serif;
     font-size: 32px;
@@ -512,28 +453,14 @@
     line-height: 1.1;
     margin-bottom: 8px;
   }
-
-  .commercial-note {
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-
+  .commercial-note { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
   .gst-note {
     background: var(--ink);
-    padding: 40px;
+    padding: 36px 40px;
     grid-column: 1 / -1;
   }
-
-  .gst-note p {
-    font-size: 14px;
-    color: rgba(255,255,255,0.45);
-    line-height: 1.7;
-  }
-
-  .gst-note strong {
-    color: var(--gold);
-    font-weight: 500;
-  }
+  .gst-note p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+  .gst-note strong { color: var(--gold); font-weight: 500; }
 
   /* ── FOOTER ── */
   .footer {
@@ -541,46 +468,24 @@
     padding: 52px 0;
     border-top: 1px solid rgba(201,168,76,0.12);
   }
-
   .footer-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   .footer-brand {
     font-family: 'Playfair Display', serif;
     font-size: 20px;
     color: var(--gold);
   }
-
-  .footer-contact {
-    text-align: right;
-  }
-
-  .footer-contact p {
-    font-size: 13px;
-    color: rgba(255,255,255,0.35);
-    line-height: 1.8;
-  }
-
-  .footer-contact a {
-    color: var(--gold);
-    text-decoration: none;
-  }
-
-  /* ── DIVIDER ── */
-  .divider {
-    width: 48px;
-    height: 2px;
-    background: var(--gold);
-    margin: 24px 0 36px;
-  }
+  .footer-contact { text-align: right; }
+  .footer-contact p { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.8; }
+  .footer-contact a { color: var(--gold); text-decoration: none; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 700px) {
     .cover { padding: 40px 28px; }
-    .cover-meta { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .cover-meta { grid-template-columns: 1fr 1fr; }
     .container { padding: 0 24px; }
     .section, .section-dark, .section-gold { padding: 56px 0; }
     .overview-grid { grid-template-columns: 1fr; }
@@ -592,6 +497,7 @@
     .gst-note { grid-column: 1; }
     .footer-inner { flex-direction: column; gap: 24px; text-align: center; }
     .footer-contact { text-align: center; }
+    .day-title { display: none; }
   }
 </style>
 </head>
@@ -604,9 +510,9 @@
     <span class="cover-tag">Confidential Proposal</span>
   </div>
   <div class="cover-main">
-    <span class="cover-eyebrow">AI Corporate Training Workshop</span>
-    <h1 class="cover-title">Claude AI Upskilling<br>for <span>Welspun One</span></h1>
-    <p class="cover-desc">A practical workshop for employees already using Claude. Focused on Excel, productivity, and workflow automation across Operations, Strategy, Supply Chain, and Analytics.</p>
+    <span class="cover-eyebrow">Claude AI Masterclass</span>
+    <h1 class="cover-title">Two-Day Claude<br>Masterclass for<br><span>Welspun One</span></h1>
+    <p class="cover-desc">A practical two-day workshop covering Claude fundamentals, prompt engineering, Skills, MCP connectors, Excel deep dive, and workflow automation. Built for employees who already have access and want to use it systematically.</p>
     <div class="cover-meta">
       <div class="meta-item">
         <div class="meta-label">Industry</div>
@@ -614,11 +520,11 @@
       </div>
       <div class="meta-item">
         <div class="meta-label">Format</div>
-        <div class="meta-value">Onsite Workshop</div>
+        <div class="meta-value">Onsite, Mumbai</div>
       </div>
       <div class="meta-item">
         <div class="meta-label">Duration</div>
-        <div class="meta-value">6 Hours</div>
+        <div class="meta-value">2 Days · 4 Hrs Each</div>
       </div>
       <div class="meta-item">
         <div class="meta-label">Trainer</div>
@@ -634,252 +540,315 @@
     <span class="section-label">Program Overview</span>
     <h2 class="section-heading">From occasional Claude users<br>to systematic operators.</h2>
     <div class="divider"></div>
-    <p class="section-intro">Welspun One already has Claude deployed company-wide. This training does not start from zero. It picks up where access ends and capability begins. Every module is built around real business scenarios from logistics, supply chain, analytics, and corporate functions.</p>
+    <p class="section-intro">Welspun One already has Claude deployed company-wide. This masterclass does not start from zero. It picks up where access ends and capability begins. Every module is hands-on, demonstration-first, and built around real business scenarios from logistics, supply chain, analytics, and corporate functions.</p>
 
     <div class="callout">
-      <p class="callout-text">Most employees with Claude access are using 20% of what it can do. This workshop closes that gap. Not with theory. With workflows they can run on Monday morning.</p>
+      <p class="callout-text">Most employees with Claude access are using 20% of what it can do. This masterclass closes that gap, not with theory, but with workflows participants can run the next morning.</p>
     </div>
 
     <div class="overview-grid">
       <div class="overview-card">
         <div class="overview-card-label">Who This Is For</div>
-        <p class="overview-card-text">Employees across <strong>Operations, Strategy, Business Development, Supply Chain, Analytics, and Corporate Functions.</strong> Participants already have Claude access and are not complete beginners.</p>
+        <p class="overview-card-text">Employees across <strong>Operations, Strategy, Business Development, Supply Chain, Analytics, and Corporate Functions.</strong> Participants already have paid Claude accounts and working familiarity with the tool.</p>
       </div>
       <div class="overview-card">
         <div class="overview-card-label">What This Is Not</div>
-        <p class="overview-card-text">This is not an AI awareness session. No slide decks on what AI is. No time spent on fundamentals. <strong>Every minute is practical, demonstrated, and immediately applicable.</strong></p>
+        <p class="overview-card-text">This is not an AI awareness session. No time spent on what AI is or why it matters. <strong>Every minute is practical, demonstrated, and immediately applicable</strong> to day-to-day work.</p>
       </div>
       <div class="overview-card">
-        <div class="overview-card-label">Primary Focus</div>
-        <p class="overview-card-text"><strong>Claude for Excel and Claude for workplace productivity.</strong> Participants leave with tested workflows, not notes to review later.</p>
+        <div class="overview-card-label">Day 1 Focus</div>
+        <p class="overview-card-text"><strong>Prompt Engineering, Memory, Projects, and Skills.</strong> Participants leave Day 1 with a functioning Claude Project and one live Skill built during the session.</p>
       </div>
       <div class="overview-card">
-        <div class="overview-card-label">Delivery Method</div>
-        <p class="overview-card-text">Live demonstration-first. Every concept is shown before it is explained. Hands-on exercises follow each module. <strong>Participants build during the session, not after.</strong></p>
+        <div class="overview-card-label">Day 2 Focus</div>
+        <p class="overview-card-text"><strong>Claude for Excel, Document Production, MCP Connectors, and Scheduling.</strong> Participants connect live tools and set up at least one automated workflow before the session ends.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MODULES -->
+<!-- CURRICULUM -->
 <section class="section-gold">
   <div class="container">
     <span class="section-label">Curriculum</span>
-    <h2 class="section-heading">Six Modules. One Direction.</h2>
+    <h2 class="section-heading">7 Modules. 2 Days.</h2>
     <div class="divider"></div>
-    <p class="section-intro">Each module builds on the last. From delegation mindset to prompt engineering, Excel workflows, document production, department-specific use cases, and finally persistent systems that run without you.</p>
+    <p class="section-intro">Day 1 builds the foundation. Day 2 applies it to real tools, real data, and automated workflows. Every module ends with a hands-on exercise participants complete before moving forward.</p>
 
-    <div class="modules-grid">
+    <div class="modules-grid" style="margin-top: 52px;">
 
-      <!-- M1 -->
-      <div class="module-card">
-        <div class="module-header">
-          <div class="module-num">01</div>
-          <div class="module-title-block">
-            <h3 class="module-title">Claude at Work. How to Stop Prompting and Start Delegating</h3>
-            <p class="module-objective">Shift participants from basic Q&A usage to systematic delegation of knowledge work tasks using Claude.</p>
+      <!-- DAY 1 -->
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-badge">Day 1</span>
+          <div class="day-line"></div>
+          <span class="day-title">Systems Thinking with Claude</span>
+        </div>
+
+        <!-- M1 -->
+        <div class="module-card" style="margin-bottom: 28px;">
+          <div class="module-header">
+            <div class="module-num">01</div>
+            <div>
+              <h3 class="module-title">How Claude Works, Prompt Engineering, and Getting Finished Work Out of It</h3>
+              <p class="module-objective">Reset how participants think about Claude and give them a repeatable prompting framework they can apply across every function immediately.</p>
+            </div>
+          </div>
+          <div class="module-body">
+            <div class="module-col">
+              <div class="module-col-label">Topics Covered</div>
+              <ul>
+                <li>Why most paid Claude users are stuck at 20% of its capability. The delegation mindset vs. the prompt mindset</li>
+                <li>Claude's three products: Chat, Cowork, and Code. Which one to use and when</li>
+                <li>Context window and tokens. Why the way you load information determines output quality</li>
+                <li>Data privacy on paid accounts. Why Welspun's data never trains Claude's models</li>
+                <li>The four-part brief structure. Role, context, task, output format</li>
+                <li>Constraint prompting. What to include, what to explicitly exclude</li>
+                <li>Iterative refinement in three turns. How to fix bad outputs without starting over</li>
+                <li>Live exercise: Participants rewrite three of their own real prompts using the framework</li>
+              </ul>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Outcome</div>
+              <p class="module-outcome">Participants understand Claude's architecture, choose the right product for the right task, and have a personal prompt framework built from their own work tasks.</p>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Tools Covered</div>
+              <div class="tools-pills">
+                <span class="pill">Claude.ai</span>
+                <span class="pill">Claude Cowork</span>
+                <span class="pill">Claude Code</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="module-body">
-          <div class="module-col">
-            <div class="module-col-label">Topics Covered</div>
-            <ul>
-              <li>Why most Claude usage is stuck at 20% of its actual capability</li>
-              <li>The delegation mindset. Treating Claude as an AI colleague, not a search engine</li>
-              <li>Context loading. How to give Claude everything it needs upfront</li>
-              <li>The difference between a prompt and a brief</li>
-              <li>Reading Claude's output critically. When to accept, when to push back</li>
-            </ul>
+
+        <!-- M2 -->
+        <div class="module-card" style="margin-bottom: 28px;">
+          <div class="module-header">
+            <div class="module-num">02</div>
+            <div>
+              <h3 class="module-title">Memory and Projects. Making Claude Remember Your Business</h3>
+              <p class="module-objective">Eliminate the starting-from-zero problem by building persistent memory structures for teams and functions.</p>
+            </div>
           </div>
-          <div class="module-col">
-            <div class="module-col-label">Outcome</div>
-            <p class="module-outcome">Participants can write structured task briefs that produce finished, usable outputs from Claude in one or two turns.</p>
+          <div class="module-body">
+            <div class="module-col">
+              <div class="module-col-label">Topics Covered</div>
+              <ul>
+                <li>Global instructions. What to set once so every Claude conversation starts right</li>
+                <li>Claude Projects. How to create one per team, function, or client</li>
+                <li>Writing project instructions that make outputs consistent without re-explaining every time</li>
+                <li>Uploading context files. SOPs, style guides, org structure, data references</li>
+                <li>Live exercise: Each participant sets up one Project for their function with instructions and one uploaded file</li>
+              </ul>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Outcome</div>
+              <p class="module-outcome">Every participant has a functioning Claude Project with written instructions and context loaded before Day 1 ends.</p>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Tools Covered</div>
+              <div class="tools-pills">
+                <span class="pill">Claude.ai</span>
+                <span class="pill">Claude Projects</span>
+              </div>
+            </div>
           </div>
-          <div class="module-col">
-            <div class="module-col-label">Tools Covered</div>
-            <div class="tools-pills">
-              <span class="pill">Claude.ai</span>
-              <span class="pill">Claude Projects</span>
+        </div>
+
+        <!-- M3 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-num">03</div>
+            <div>
+              <h3 class="module-title">Skills. Claude's Muscle Memory</h3>
+              <p class="module-objective">Participants understand what Skills are, when to build one, and build their first Skill using the TAR framework during the session.</p>
+            </div>
+          </div>
+          <div class="module-body">
+            <div class="module-col">
+              <div class="module-col-label">Topics Covered</div>
+              <ul>
+                <li>What a Skill is and how it differs from a Project or a prompt</li>
+                <li>The TAR framework. Trigger, Action, Result. Planning before building</li>
+                <li>When to build a Skill vs. when to just prompt. The 6-point decision checklist</li>
+                <li>Anatomy of a Skill folder. SKILL.md, reference files, scripts, assets</li>
+                <li>Writing skill descriptions that fire precisely. Good vs. bad description examples</li>
+                <li>Live build: Participants use Skill Creator to build one Skill for a task they repeat at least three times a week</li>
+              </ul>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Outcome</div>
+              <p class="module-outcome">Every participant leaves Day 1 with one working Skill built around a real recurring task from their own job.</p>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Tools Covered</div>
+              <div class="tools-pills">
+                <span class="pill">Claude.ai</span>
+                <span class="pill">Claude Skills</span>
+                <span class="pill">Skill Creator</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- M2 -->
-      <div class="module-card">
-        <div class="module-header">
-          <div class="module-num">02</div>
-          <div class="module-title-block">
-            <h3 class="module-title">Prompt Engineering for Corporate Teams</h3>
-            <p class="module-objective">Equip participants with a repeatable prompting system for business scenarios across functions.</p>
-          </div>
+      <!-- DAY 2 -->
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-badge">Day 2</span>
+          <div class="day-line"></div>
+          <span class="day-title">Excel, Automation & Live Integrations</span>
         </div>
-        <div class="module-body">
-          <div class="module-col">
-            <div class="module-col-label">Topics Covered</div>
-            <ul>
-              <li>The four components of a high-performance prompt. Role, context, task, output format</li>
-              <li>Constraint prompting. Telling Claude what NOT to do is as important as what to do</li>
-              <li>Iterative prompting. How to refine outputs in three turns instead of starting over</li>
-              <li>Prompt templates for recurring tasks. Reports, summaries, emails, analysis briefs</li>
-              <li>Department-specific prompt examples. Operations, Supply Chain, Strategy, Analytics</li>
-            </ul>
+
+        <!-- M4 -->
+        <div class="module-card" style="margin-bottom: 28px;">
+          <div class="module-header">
+            <div class="module-num">04</div>
+            <div>
+              <h3 class="module-title">Claude for Excel. Deep Dive</h3>
+              <p class="module-objective">Transform how participants use Excel by making Claude an active analysis partner for data work, not just a formula lookup tool.</p>
+            </div>
           </div>
-          <div class="module-col">
-            <div class="module-col-label">Outcome</div>
-            <p class="module-outcome">Participants have a personal library of tested prompt templates they can use immediately for their function.</p>
-          </div>
-          <div class="module-col">
-            <div class="module-col-label">Tools Covered</div>
-            <div class="tools-pills">
-              <span class="pill">Claude.ai</span>
+          <div class="module-body">
+            <div class="module-col">
+              <div class="module-col-label">Topics Covered</div>
+              <ul>
+                <li>Formula generation and live debugging. Describe the logic, get the formula</li>
+                <li>Data cleaning in plain English. Inconsistent entries, duplicates, column restructuring</li>
+                <li>Analysis from raw data. Trends, comparisons, anomalies, period-over-period breakdowns</li>
+                <li>Building structured Excel reports. Commentary, flagged metrics, executive summaries</li>
+                <li>Handling large files. Python-assisted chunking for datasets beyond standard paste limits</li>
+                <li>Business use case examples: Logistics cost analysis, warehouse inventory variance, vendor performance tracking</li>
+                <li>Live exercise: Participants bring one real Excel file and run three analysis tasks using Claude</li>
+              </ul>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Outcome</div>
+              <p class="module-outcome">Participants can delegate formula work, data cleaning, and report commentary to Claude and get accurate, structured outputs back.</p>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Tools Covered</div>
+              <div class="tools-pills">
+                <span class="pill">Claude.ai</span>
+                <span class="pill">Microsoft Excel</span>
+                <span class="pill">Claude for Excel</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- M3 -->
-      <div class="module-card">
-        <div class="module-header">
-          <div class="module-num">03</div>
-          <div class="module-title-block">
-            <h3 class="module-title">Claude for Excel and Data Work</h3>
-            <p class="module-objective">Enable participants to use Claude as an active analysis partner for spreadsheet and data tasks, not just a formula generator.</p>
+        <!-- M5 -->
+        <div class="module-card" style="margin-bottom: 28px;">
+          <div class="module-header">
+            <div class="module-num">05</div>
+            <div>
+              <h3 class="module-title">Business Document and Report Production</h3>
+              <p class="module-objective">Replace slow manual drafting of standard corporate documents with Claude-assisted workflows that produce first drafts in minutes.</p>
+            </div>
           </div>
-        </div>
-        <div class="module-body">
-          <div class="module-col">
-            <div class="module-col-label">Topics Covered</div>
-            <ul>
-              <li>Formula generation and debugging. Describe what you want in plain English, get working formulas back</li>
-              <li>Data cleaning and restructuring. Inconsistent entries, duplicate logic, column transformations</li>
-              <li>Analysis requests from raw data. Trends, anomalies, summaries, comparisons across sheets</li>
-              <li>Building Excel reports using Claude. Structuring outputs, writing commentary, flagging key numbers</li>
-              <li>Claude for large datasets. Python-assisted chunking for files beyond standard paste limits</li>
-            </ul>
-          </div>
-          <div class="module-col">
-            <div class="module-col-label">Outcome</div>
-            <p class="module-outcome">Participants can offload formula writing, data cleaning, and report commentary to Claude and get accurate, usable outputs.</p>
-          </div>
-          <div class="module-col">
-            <div class="module-col-label">Tools Covered</div>
-            <div class="tools-pills">
-              <span class="pill">Claude.ai</span>
-              <span class="pill">Microsoft Excel</span>
-              <span class="pill">Claude for Excel</span>
+          <div class="module-body">
+            <div class="module-col">
+              <div class="module-col-label">Topics Covered</div>
+              <ul>
+                <li>SOPs and process documentation. Speak the process, Claude structures the document</li>
+                <li>Business reports and executive summaries. Raw data or notes in, formatted report out</li>
+                <li>Presentation structuring. From a bullet-point brain dump to a slide narrative</li>
+                <li>Research synthesis. Upload multiple sources, get one consolidated briefing document</li>
+                <li>Email and escalation drafting. Tone-matched, context-aware, ready to send</li>
+              </ul>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Outcome</div>
+              <p class="module-outcome">Participants produce first drafts of SOPs, reports, presentations, and emails in a fraction of the current time using a repeatable workflow.</p>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Tools Covered</div>
+              <div class="tools-pills">
+                <span class="pill">Claude.ai</span>
+                <span class="pill">Google Drive</span>
+                <span class="pill">Microsoft Word</span>
+                <span class="pill">PowerPoint</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- M4 -->
-      <div class="module-card">
-        <div class="module-header">
-          <div class="module-num">04</div>
-          <div class="module-title-block">
-            <h3 class="module-title">Business Document and Report Production</h3>
-            <p class="module-objective">Replace manual drafting of standard business documents with Claude-assisted production workflows.</p>
+        <!-- M6 -->
+        <div class="module-card" style="margin-bottom: 28px;">
+          <div class="module-header">
+            <div class="module-num">06</div>
+            <div>
+              <h3 class="module-title">MCP Connectors. Connecting Claude to Your Real Tools</h3>
+              <p class="module-objective">Participants understand what MCP is, connect at least one live tool during the session, and see Claude reading their actual data.</p>
+            </div>
           </div>
-        </div>
-        <div class="module-body">
-          <div class="module-col">
-            <div class="module-col-label">Topics Covered</div>
-            <ul>
-              <li>SOPs and process documentation. Dictate a process, Claude structures it into a formatted document</li>
-              <li>Business reports and summaries. Upload raw data or notes, get a structured report back</li>
-              <li>Email and communication drafting. Context-aware drafts that match corporate tone</li>
-              <li>Presentation structuring. Outline to slide narrative in one brief</li>
-              <li>Research synthesis. Upload multiple sources, get a consolidated briefing document</li>
-            </ul>
-          </div>
-          <div class="module-col">
-            <div class="module-col-label">Outcome</div>
-            <p class="module-outcome">Participants produce first drafts of reports, SOPs, emails, and presentations in a fraction of the current time.</p>
-          </div>
-          <div class="module-col">
-            <div class="module-col-label">Tools Covered</div>
-            <div class="tools-pills">
-              <span class="pill">Claude.ai</span>
-              <span class="pill">Google Drive</span>
-              <span class="pill">Microsoft Word</span>
-              <span class="pill">PowerPoint</span>
+          <div class="module-body">
+            <div class="module-col">
+              <div class="module-col-label">Topics Covered</div>
+              <ul>
+                <li>What MCP is and why it matters. From copy-paste to live data access in real time</li>
+                <li>How to connect a tool. Step-by-step setup inside Claude Desktop</li>
+                <li>Permissions and safety. What you allow Claude to read vs. write</li>
+                <li>Tools most relevant to Welspun functions: Google Drive, Google Sheets, Gmail, Google Calendar</li>
+                <li>Live setup: Each participant connects one MCP tool and runs a test prompt against their live data</li>
+                <li>What becomes possible after MCP. Removing the manual middle step from recurring workflows</li>
+              </ul>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Outcome</div>
+              <p class="module-outcome">Every participant has at least one MCP tool connected and has seen Claude pull live data from it during the session.</p>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Tools Covered</div>
+              <div class="tools-pills">
+                <span class="pill">Claude Desktop</span>
+                <span class="pill">MCP Connectors</span>
+                <span class="pill">Google Drive</span>
+                <span class="pill">Google Sheets</span>
+                <span class="pill">Gmail</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- M5 -->
-      <div class="module-card">
-        <div class="module-header">
-          <div class="module-num">05</div>
-          <div class="module-title-block">
-            <h3 class="module-title">Claude for Department-Specific Workflows</h3>
-            <p class="module-objective">Translate general Claude capabilities into concrete, role-relevant workflows for every function in the room.</p>
+        <!-- M7 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-num">07</div>
+            <div>
+              <h3 class="module-title">Workflow Automation and Scheduling</h3>
+              <p class="module-objective">Show participants how to make Claude workflows run automatically without them initiating anything, turning one-time setups into ongoing systems.</p>
+            </div>
           </div>
-        </div>
-        <div class="module-body">
-          <div class="module-col">
-            <div class="module-col-label">Topics Covered</div>
-            <ul>
-              <li>Operations and Supply Chain. Vendor communication drafts, procurement summaries, delay analysis from data</li>
-              <li>Strategy and Business Development. Market research synthesis, competitive landscape briefs, deck narrative drafts</li>
-              <li>Analytics. Hypothesis framing, data commentary, insight summarization from outputs</li>
-              <li>Corporate Functions (HR, Finance, Admin). Policy drafts, budget commentary, meeting summary workflows</li>
-              <li>Live group exercise. Each department group maps one recurring weekly task to a Claude workflow</li>
-            </ul>
-          </div>
-          <div class="module-col">
-            <div class="module-col-label">Outcome</div>
-            <p class="module-outcome">Every participant leaves with at least one mapped Claude workflow specific to their function and measurable time savings identified.</p>
-          </div>
-          <div class="module-col">
-            <div class="module-col-label">Tools Covered</div>
-            <div class="tools-pills">
-              <span class="pill">Claude.ai</span>
-              <span class="pill">Claude Projects</span>
-              <span class="pill">Google Sheets</span>
-              <span class="pill">Excel</span>
+          <div class="module-body">
+            <div class="module-col">
+              <div class="module-col-label">Topics Covered</div>
+              <ul>
+                <li>How scheduling works in Claude Desktop. Setup, frequency, output folders</li>
+                <li>Designing a scheduled workflow. What tasks are worth automating vs. what need human judgment</li>
+                <li>Examples relevant to corporate functions: Daily data summaries, weekly report generation, recurring email drafts</li>
+                <li>The Pipeline Method folder structure. Raw, Context, Deliverables, Archive</li>
+                <li>Live demo: Build and schedule one automated task end-to-end during the session</li>
+              </ul>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Outcome</div>
+              <p class="module-outcome">Participants can design and set up a scheduled Claude workflow for at least one recurring task in their function.</p>
+            </div>
+            <div class="module-col">
+              <div class="module-col-label">Tools Covered</div>
+              <div class="tools-pills">
+                <span class="pill">Claude Desktop</span>
+                <span class="pill">Claude Cowork</span>
+                <span class="pill">Claude Scheduling</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- M6 -->
-      <div class="module-card">
-        <div class="module-header">
-          <div class="module-num">06</div>
-          <div class="module-title-block">
-            <h3 class="module-title">Memory, Projects, and Building Repeatable Systems</h3>
-            <p class="module-objective">Move participants from one-off Claude interactions to persistent, structured workflows that build institutional value over time.</p>
-          </div>
-        </div>
-        <div class="module-body">
-          <div class="module-col">
-            <div class="module-col-label">Topics Covered</div>
-            <ul>
-              <li>Claude Projects. What they are, how to set them up, and why every team should have one per function</li>
-              <li>Project instructions. Writing the brief that makes every future interaction consistent</li>
-              <li>Uploading context files. Feeding Claude your SOPs, style guides, and data references</li>
-              <li>Building a team Claude workflow. One shared Project, consistent outputs, no single-person dependency</li>
-              <li>Skills overview. What they are, when to build one, and how to hand off to a non-technical team member</li>
-            </ul>
-          </div>
-          <div class="module-col">
-            <div class="module-col-label">Outcome</div>
-            <p class="module-outcome">Participants set up one functioning Claude Project for their team before the session ends, with instructions and at least one uploaded context file.</p>
-          </div>
-          <div class="module-col">
-            <div class="module-col-label">Tools Covered</div>
-            <div class="tools-pills">
-              <span class="pill">Claude.ai</span>
-              <span class="pill">Claude Projects</span>
-              <span class="pill">Claude Skills</span>
-            </div>
-          </div>
-        </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -894,7 +863,7 @@
       <div>
         <h3 class="trainer-name">Rishi Jain</h3>
         <p class="trainer-title">Co-Founder, Digital Scholar</p>
-        <p class="trainer-bio">Rishi has trained over 300 corporate teams across India on AI adoption, prompt engineering, and Claude-specific workflows. He specializes in translating Claude's technical capabilities into practical systems for non-technical business teams. His workshops are built around demonstration first, explanation second. Participants leave with workflows running, not notes to review.</p>
+        <p class="trainer-bio">Rishi has trained corporate teams across India on AI adoption, prompt engineering, and Claude-specific workflows. He specializes in translating Claude's technical capabilities into practical systems for non-technical business teams. His workshops are built around demonstration first, explanation second. Participants leave with workflows running, not notes to review later.</p>
         <div style="margin-bottom: 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3);">Clients Trained</div>
         <div class="client-pills">
           <span class="client-pill">GM Modular</span>
@@ -919,17 +888,16 @@
     <span class="section-label">Investment</span>
     <h2 class="section-heading">Commercial Details</h2>
     <div class="divider"></div>
-
     <div class="commercials-grid">
       <div class="commercial-item">
         <div class="commercial-label">Training Fee</div>
         <div class="commercial-value">INR 6,00,000</div>
-        <p class="commercial-note">Base fee for the full workshop. Exclusive of GST.</p>
+        <p class="commercial-note">Base fee for the full two-day masterclass. Exclusive of GST.</p>
       </div>
       <div class="commercial-item">
         <div class="commercial-label">Session Duration</div>
-        <div class="commercial-value">6 Hours</div>
-        <p class="commercial-note">Onsite. Single day. Schedule confirmed on agreement.</p>
+        <div class="commercial-value">2 Days · 4 Hrs Each</div>
+        <p class="commercial-note">Onsite. Schedule confirmed on agreement.</p>
       </div>
       <div class="commercial-item">
         <div class="commercial-label">Format</div>
